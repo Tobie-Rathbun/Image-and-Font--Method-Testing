@@ -14,18 +14,18 @@ draw = ImageDraw.Draw(img)
 font = ImageFont.truetype("arial.ttf", 36)
 
 # Draw some text
-text = "Hello World! 800 830 869 872"
+text = "Hello World! 987-654/321|0.0.0.0"
 draw.text((50, 50), text, (0, 0, 0), font=font)
 
 # Save the image
-img.save("hello_world.png")
+img.save("Sample_Saved_Image.png")
 
 # Display the Image
 #img.show()
 
 
 # Load the image
-img = Image.open("hello_world.png")
+img = Image.open("Sample_Saved_Image.png")
 
 # Convert the image to a PhotoImage object
 img = ImageTk.PhotoImage(img)

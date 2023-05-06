@@ -18,8 +18,10 @@ draw = ImageDraw.Draw(img)
 # Choose a font size
 font_size = 36
 
-# Get the list of .ttf files in the same directory as this script
-font_files = [f for f in os.listdir() if f.endswith('.ttf')]
+# Get the list of .ttf files in the "Fonts" directory
+font_dir = "Fonts"
+font_files = [os.path.join(font_dir, f) for f in os.listdir(font_dir) if f.endswith('.ttf')]
+
 
 # Initialize the font index
 font_index = 0

@@ -34,8 +34,10 @@ try:
     lines = textwrap.wrap(sample_text, width=20)
     y = 50
     for line in lines:
+        text_bbox = draw.textbbox((50, y), line, font=font)
+        text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
         draw.text((50, y), line, (0, 0, 0), font=font)
-        y += font.getsize(line)[1]
+        y += text_height + 10
     # Update the image on the label
     img_tk = ImageTk.PhotoImage(img)
     label = tk.Label(root, image=img_tk)
